@@ -16,6 +16,19 @@ public class Equipo {
 
     public Equipo (String nombre) {
         this.nombre= nombre;
+        this.entrenador= null;
+        this.jugadores= new ArrayList<Jugador>();
+    }
+
+    /** @param j El jugador que se agrega a la plantilla */
+
+    public void añadirJugador(Jugador j) {
+        this.jugadores.add(j);
+    }
+
+    /** @param entrenador El nuevo entrenador que se asigna al equipo */
+    public void setEntrenador(Entrenador entrenador) {
+        this.entrenador= entrenador;
     }
 
     @Override
