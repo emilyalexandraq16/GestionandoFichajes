@@ -3,7 +3,8 @@ import java.time.LocalDate;
  * Contiene información del jugador, posición y estado de traspaso
  */
 
-public class Jugador {
+public class Jugador { /**Atributos de la clase Jugador */
+    public static int contadorJug=0; /**Contador de jugadores creados */
     private String nombre;
     private LocalDate fechaNacimiento;
     private String posicion;
@@ -15,25 +16,27 @@ public class Jugador {
          * @param fechaNacimiento Fecha de nacimiento.
          * @param posicion Posicion del jugador en el campo.
          */
-
         public Jugador (String nombre, LocalDate fechaNacimiento, String posicion) {
             this.nombre= nombre;
             this.fechaNacimiento= fechaNacimiento;
             this.posicion=posicion;
             this.traspasoSolicitado=false;
+            contadorJug++;
         }
 
-        /** Activa la solicitud de traspaso de un jugador y muestra un mensaje informando sobre ello. */
-        public void solicitarTraspaso() {
+        /** Metodo que activa la solicitud de traspaso de un jugador y muestra un mensaje informando sobre ello. */
+        public void solicitaTraspaso() {
             this.traspasoSolicitado= true;
             System.out.println("El jugador " + this.nombre+  "ha solicitado un traspaso.");
         }
 
-        /** Cancela la solicitud de traspaso del jugador */
+        /** Metodo que cancela la solicitud de traspaso del jugador */
         public void cancelaTraspaso() {
             this.traspasoSolicitado= false;
             System.out.println("El jugador " + this.nombre + "ha cancelado su traspaso.");
         }
+
+        /**getters y setter de la clase Jugador para obtener su informacion. */
 
         /**@return El nombre del jugador */
         public String getNombre() {return nombre;}
@@ -47,12 +50,18 @@ public class Jugador {
         public String getPosicion() {return posicion;}
         public void setPosicion(String posicion) {this.posicion= posicion;}
 
-        /** @return Se obtiene true si el Jugador ha solicitado un traspaso, si no se obtiene false */
+        /** @return Metodo el cual obtiene true si el Jugador ha solicitado un traspaso, si no se obtiene false */
         public boolean traspasoSolicitado() {return traspasoSolicitado;}
         public void setTraspasoSolicitado (boolean traspasoSolicitado) {this.traspasoSolicitado=traspasoSolicitado;}
 
+        /**Metodo toString() */
         @Override
         public String toString() {
-            return "JUGADOR: " + nombre + "FECHA DE NACIMIENTO: ";
+            return "JUGADOR: " + nombre + " FECHA DE NACIMIENTO: " + fechaNacimiento + " POSICION: " + posicion + " TRASPASO: " + (traspasoSolicitado ? "si" : "no");
+        }
+
+        /**@return Metodo static para obtener la cantidad de jugadores instanciados. */
+        public static int getContadorJug() {
+            return contadorJug;
         }
 }
