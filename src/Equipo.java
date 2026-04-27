@@ -1,9 +1,12 @@
+import java.util.ArrayList;
 /**
  * Clase que gestiona un equipo de la Liga, su entrenador y la lista de jugadores.
  */
 
 public class Equipo {
     private String nombre;
+    private Entrenador entrenador;
+    private ArrayList<Jugador> jugadores;
     
 
     /**
