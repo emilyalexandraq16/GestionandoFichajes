@@ -4,7 +4,7 @@
 
 public class Entrenador {
     private String nombre;
-    private String fromacionPref;
+    private String formacionPref;
 
     /**
      * Contructor de Entrenador
@@ -14,6 +14,11 @@ public class Entrenador {
 
     public Entrenador(String nombre, String formacionPref) {
         this.nombre=nombre;
-        this.fromacionPref= formacionPref;
+        this.formacionPref= formacionPref;
     }
+
+    @Override
+        public String toString() {
+            return "ENTRENADOR: " + nombre + "FORMACION: " + formacionPref;
+        }
 }

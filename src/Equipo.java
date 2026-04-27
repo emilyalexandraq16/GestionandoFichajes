@@ -14,4 +14,9 @@ public class Equipo {
     public Equipo (String nombre) {
         this.nombre= nombre;
     }
+
+    @Override
+        public String toString() {
+            return "ENTRENADOR: " + nombre ;
+        }
 }

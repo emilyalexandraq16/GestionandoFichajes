@@ -24,5 +24,10 @@ public class Main {
         Jugador j4= new Jugador("Robert Lewandowski", LocalDate.of(1988, 8, 21), "Delantero");
         Jugador j5= new Jugador("Pedri", LocalDate.of(2002,11, 25), "Centrocampista");
 
+        System.out.println(e1.toString());
+        System.out.println(eq1.toString());
+        System.out.println(j2.toString());
+        System.out.println(j4.toString());
+
     }
 }
