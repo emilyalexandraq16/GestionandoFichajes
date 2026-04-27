@@ -23,6 +23,18 @@ public class Jugador {
             this.traspasoSolicitado=false;
         }
 
+        /** Activa la solicitud de traspaso de un jugador y muestra un mensaje informando sobre ello. */
+        public void solicitarTraspaso() {
+            this.traspasoSolicitado= true;
+            System.out.println("El jugador " + this.nombre+  "ha solicitado un traspaso.");
+        }
+
+        /** Cancela la solicitud de traspaso del jugador */
+        public void cancelarTraspaso() {
+            this.traspasoSolicitado= false;
+            System.out.println("El jugador " + this.nombre + "ha cancelado su traspaso.");
+        }
+
         @Override
         public String toString() {
             return "JUGADOR: " + nombre + "FECHA DE NACIMIENTO: ";
