@@ -30,10 +30,26 @@ public class Jugador {
         }
 
         /** Cancela la solicitud de traspaso del jugador */
-        public void cancelarTraspaso() {
+        public void cancelaTraspaso() {
             this.traspasoSolicitado= false;
             System.out.println("El jugador " + this.nombre + "ha cancelado su traspaso.");
         }
+
+        /**@return El nombre del jugador */
+        public String getNombre() {return nombre;}
+        public void setNombre(String nombre) {this.nombre= nombre;}
+
+        /**@return La fecha de nacimiento del jugador */
+        public LocalDate getFechaNacimiento() {return fechaNacimiento;}
+        public void setFechaNacimiento(LocalDate fechaNacimiento) {this.fechaNacimiento= fechaNacimiento;}
+
+        /**@return La posicion del jugador */
+        public String getPosicion() {return posicion;}
+        public void setPosicion(String posicion) {this.posicion= posicion;}
+
+        /** @return Se obtiene true si el Jugador ha solicitado un traspaso, si no se obtiene false */
+        public boolean traspasoSolicitado() {return traspasoSolicitado;}
+        public void setTraspasoSolicitado (boolean traspasoSolicitado) {this.traspasoSolicitado=traspasoSolicitado;}
 
         @Override
         public String toString() {
