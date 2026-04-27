@@ -22,4 +22,9 @@ public class Jugador {
             this.posicion=posicion;
             this.traspasoSolicitado=false;
         }
+
+        @Override
+        public String toString() {
+            return "JUGADOR: " + nombre + "FECHA DE NACIMIENTO: ";
+        }
 }
