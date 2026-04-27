@@ -29,5 +29,14 @@ public class Main {
         System.out.println(j2.toString());
         System.out.println(j4.toString());
 
+        eq1.setEntrenador(e1);
+        eq1.añadirJugador(j1);
+        eq1.añadirJugador(j2);
+        eq1.añadirJugador(j3);
+
+        eq2.setEntrenador(e2);
+        eq2.añadirJugador(j4);
+        eq2.añadirJugador(j5);
+
     }
 }
